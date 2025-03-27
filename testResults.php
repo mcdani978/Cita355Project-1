@@ -58,7 +58,7 @@ else
 {
 	$incorrect += 1;
 }
-$score = $correct / ($correct + $incorrect);
+$score = ($correct / ($correct + $incorrect)) * 100;
 
 $sql = "INSERT INTO examResult(studentID, dateTaken, time, score, correct, incorrect)
 		VALUES('$_SESSION[studentID]', '$startDate', $timeDiff,
@@ -80,7 +80,6 @@ $members = $statement->fetchAll();
 	<title>Exam Submitted. Viewing results.</title>
 	<body>
 		<h2>Student Information</h2>
-		<p><?=$startDate?></p>
 		<table>
 			<thead>
 				<tr>
@@ -96,10 +95,11 @@ $members = $statement->fetchAll();
 						<td><?= $member['studentID'] ?></td>
 						<td><?= $member['dateTaken'] ?></td>
 						<td><?= $member['time'] ?></td>
-						<td><?= $member['score'] * 100 ?>%</td>
+						<td><?= $member['score'] ?>%</td>
 					</tr>
 				<?php } ?>
 			</tbody>
 		</table>
+		<p><a href="home.php">Return to Home Page</a></p>
 	</body>
 </html>
