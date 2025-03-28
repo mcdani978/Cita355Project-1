@@ -100,6 +100,6 @@ $members = $statement->fetchAll();
 				<?php } ?>
 			</tbody>
 		</table>
-		<p><a href="home.php">Return to Home Page</a></p>
+		<p><a href="homepage.php?status=loggedin">Return to Home Page</a></p>
 	</body>
 </html>
