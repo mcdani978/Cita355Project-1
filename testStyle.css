@@ -1,0 +1,35 @@
+a {
+	color: gold;
+}
+body {
+	text-shadow: 1px 1px 3px black;
+	background-color: darkslateblue;
+	color:ivory;
+}
+h3 {
+	text-shadow: 2px 2px 5px black;
+  	text-decoration: underline;
+}
+div {
+	margin-left: 30px;
+}
+p {
+	margin-left: 10px;
+}
+table {
+	border: 2px solid;
+	margin-left: 20px;
+}
+th,td {
+	border: 1px dotted;
+	text-align: center;
+	min-height: 20px;
+	padding: 3px;
+}
+table, th, td {
+	border-collapse: collapse;
+	border-color: gainsboro;
+}
+tr:hover {
+	background-color: slateblue;
+}

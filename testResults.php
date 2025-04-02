@@ -1,6 +1,7 @@
 <?php
 session_start();
 require 'database-connection.php';
+
 $start = date('Y-m-d H:i:s', $_POST['timeTaken']);
 $startDate = date('Y-m-d', $_POST['timeTaken']);
 $startTime = new DateTime($start);
@@ -78,6 +79,8 @@ $members = $statement->fetchAll();
 <head>
 	<meta charset="utf-8">
 	<title>Exam Submitted. Viewing results.</title>
+	<link rel="stylesheet" href="testStyle.css">
+</head>
 	<body>
 		<h2>Student Information</h2>
 		<table>
@@ -100,6 +103,6 @@ $members = $statement->fetchAll();
 				<?php } ?>
 			</tbody>
 		</table>
-		<p><a href="home.php">Return to Home Page</a></p>
+		<p><a href="Homepage.php">Return to Home Page</a></p>
 	</body>
 </html>
