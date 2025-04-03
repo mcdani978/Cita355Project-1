@@ -1,5 +1,5 @@
 <?php
-require 'database-connection.php'; 
+require 'dbConnection.php'; 
 session_start();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -36,6 +36,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Insert student info into database
         $sql = "INSERT INTO studentinformation (StudentId, FirstName, LastName, Email, Password) 
                 VALUES (:studentId, :firstName, :lastName, :email, :password)";
+
+
         
         $stmt = $pdo->prepare($sql);
         $stmt->execute([
